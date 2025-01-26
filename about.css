@@ -5,7 +5,7 @@
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #e8e8e8;
     }
     .container {
       display: flex;
@@ -13,7 +13,7 @@
       background: #ffffff;
       border-radius: 10px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      padding-left: 0px;
+      padding-left: 105px;
     }
     .image {
       flex: 1;
@@ -29,40 +29,104 @@
     .text {
       flex: 1;
       text-align: left;
-      padding: 0 20px;
+      padding: 0 0px;
     }
     .text h1 {
-      margin: 0;
+      margin: 0 0 20px; /* เพิ่มระยะห่างด้านล่าง 20px */
       font-size: 24px;
       color: #333;
     }
     .text p {
-      margin: 5px 0 0;
+      margin: 0 0 5px; /* เพิ่มระยะห่างด้านล่าง 20px */
       font-size: 18px;
       color: #666;
     }
-    .back-button {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background: #E53E3E; /* red-600 */
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
+    
+    /* โปรไฟล์เด้ง */
+    .profile-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px; /* เพิ่มระยะห่างจากเนื้อหา */
+      }
+      
+      .profile-picture {
+        width: 80%;
+        border-radius: 50%;
+        border: 0px solid #d63384;
+        animation: bounce 1.5s infinite;
+        transition: transform 0.3s ease;
+      }
+      
+      .profile-picture:hover {
+        transform: scale(1.1);
+      }
+      
+      /* Bounce animation */
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
+      
 
-    .back-button:hover {
-        background: #C53030; /* red-700 */
-    }
+   /* ปุ่ม FACEBOOK */
+   .social-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* ระยะห่างระหว่างปุ่ม */
+    margin-top: 25px; /* ระยะห่างด้านบน */
+  }
+  
+  .facebook-button,
+  .instagram-button {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ระยะห่างระหว่างโลโก้กับข้อความในปุ่ม */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .facebook-button {
+    background-color: #1877f2; /* สีพื้นหลังของปุ่ม Facebook */
+    color: white;
+  }
+  
+  .facebook-button:hover {
+    background-color: #145dbf; /* สีเมื่อ hover */
+    transform: scale(1.05);
+  }
+  
+  .instagram-button {
+    background: linear-gradient(45deg,  #d62976, #962fbf, #4f5bd5);
+    color: white;
+  }
+  
+  .instagram-button:hover {
+    background: linear-gradient(45deg,  #d62976, #962fbf, #4f5bd5);
+    transform: scale(1.05);
+  }
+  
+  .social-buttons img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  
 
     .navbar {
       width: 100%;
-      background-color: #1f2937; /* สีพื้นหลังของ Navbar */
+      background-color: #111827; /* สีพื้นหลังของ Navbar */
       padding: 1rem 0;
       position: fixed;
       top: 0;
