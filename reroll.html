@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="logo.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reginlief | Anime Adventures Project</title>
+  <link rel="stylesheet" href="reroll.css">
+</head>
+<body>
+
+<!-- Animated Gradient Background -->
+<div class="blob-outer-container">
+  <div class="blob-inner-container">
+    <div class="blob"></div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <ul class="nav-list">
+    <li><a href="index.html" class="nav-link home-link">Home</a></li>
+    <li><a href="reroll.html" class="nav-link reroll-link">Reroll Trait</a></li>
+    <li><a href="about.html" class="nav-link about-link">About</a></li>
+  </ul>
+</nav>
+
+<div class="wrapper">
+  <div class="container">
+    <h1>Trait Reroll | Simulator 🍀🌠</h1>
+    <div class="result">
+      <!-- รูปภาพยูนิต -->
+      <img id="unit-image" src="" alt="Unit Image" style="display: none;">
+      <p id="unit-display"></p>
+      <p id="roll-count">Rolls Counter : 0</p>
+      <span id="roll-count"></span>
+    </div>
+    <button id="reroll-button">Reroll</button>
+    <button id="reroll-until-knight">Reroll Until Unique</button>
+    <button id="reset-button">Reset Roll</button>
+    <button id="stop-reroll-button" style="display: none;">Stop Reroll</button>
+  </div>
+</div>
+
+<div class="trait-wrapper">
+  <h2>👑 Trait Chances 👑</h2>
+  <ul class="trait-list">
+    <li>
+      <img src="trait/unique.png" alt="Unique Icon" class="trait-icon">
+      <span class="trait gradient low"><strong>Unique</strong></span>
+      <span class="chance">0.1%</span>
+    </li>
+
+    <li>
+      <img src="trait/golden.png" alt="Golden Icon" class="trait-icon">
+      <span class="trait gradient low">Golden</span>
+      <span class="chance">0.15%</span>
+    </li>
+
+    <li>
+      <img src="trait/divine.png" alt="Divine Icon" class="trait-icon">
+      <span class="trait gradient low">Divine</span>
+      <span class="chance">0.2%</span>
+    </li>
+
+    <li>
+      <img src="trait/celestial.png" alt="Celestial Icon" class="trait-icon">
+      <span class="trait gradient low">Celestial</span>
+      <span class="chance">0.36%</span>
+    </li>
+
+    <li>
+        <img src="trait/reaper.png" alt="Reaper Icon" class="trait-icon">
+        <span class="trait gradient low">Reaper</span>
+        <span class="chance">0.8%</span>
+      </li>
+
+    <li>
+      <img src="trait/godspeed.png" alt="Godspeed Icon" class="trait-icon">
+      <span class="trait gradient medium">Godspeed</span>
+      <span class="chance">1%</span>
+    </li>
+
+    <li>
+        <img src="trait/sniper.png" alt="Sniper Icon" class="trait-icon">
+        <span class="trait gradient medium">Sniper</span>
+        <span class="chance">2.5%</span>
+      </li>
+
+      <li>
+        <img src="trait/culling.png" alt="culling Icon" class="trait-icon">
+        <span class="trait gradient medium">Culling</span>
+        <span class="chance">5%</span>
+      </li>
+
+      <li>
+        <img src="trait/adept.png" alt="Adept Icon" class="trait-icon">
+        <span class="trait gradient medium">Adept</span>
+        <span class="chance">9.99%</span>
+      </li>
+
+      <li>
+        <img src="trait/range1.png" alt="Range Icon" class="trait-icon">
+        <span class="trait gradient high">Range</span>
+        <span class="chance">24.98%</span>
+      </li>
+
+      <li>
+        <img src="trait/nimble1.png" alt="Nimble Icon" class="trait-icon">
+        <span class="trait gradient high">Nimble</span>
+        <span class="chance">24.98%</span>
+      </li>
+
+      <li>
+        <img src="trait/superior1.png" alt="Superior Icon" class="trait-icon">
+        <span class="trait gradient high">Superior</span>
+        <span class="chance">29.97%</span>
+      </li>
+  </ul>
+</div>
+
+<div class="roll-tracker-wrapper">
+  <h2>📈 Roll Tracker 📉</h2>
+  <div id="roll-tracker" class="roll-tracker">
+    <!-- รูปจะถูกเพิ่มที่นี่ผ่าน JavaScript -->
+  </div>
+</div>
+
+<script src="scriptreroll.js"></script>
+</body>
+</html>

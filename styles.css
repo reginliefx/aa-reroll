@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111827;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #ffffff; /* Set text color to white */
+}
+
+        /* Button Group */
+        .button-group {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+      }
+
+      .button {
+          padding: 10px 20px;
+          font-size: 1.2rem;
+          text-decoration: none;
+          color: #fff;
+          background-color: #007bff;
+          border-radius: 8px;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .button:hover {
+          background-color: #0056b3;
+      }
+
+      .button:active {
+          transform: scale(0.95);
+      }
+
+      .button img {
+          width: 24px;
+          height: 24px;
+      }
+
+/* Credits */
+.credits {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #1f2937; /* สีพื้นหลังของ Navbar */
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #374151;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0 1.5rem;
+}
+
+.nav-link.home-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #d63384; /* ไม่มีพื้นหลัง */
+  transition: all 0.3s ease;
+}
+
+.nav-link.about-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: transparent; /* ไม่มีพื้นหลัง */
+  transition: all 0.3s ease;
+}
+
+.nav-link.reroll-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: transparent; /* ไม่มีพื้นหลัง */
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #d63384; /* สีชมพูเข้มตอน hover */
+}
+
+.nav-link.active {
+  background-color: #d63384; /* สีชมพูเข้มตอน active */
+  color: white; /* สีตัวอักษร */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+
+
+/* Animation for fade-in effect on page load */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    background-color: black;
+  }
+  80% {
+    opacity: 1;
+    background-color: black;
+  }
+}
+
+/* Apply fade-in effect to the body */
+body {
+  animation: fadeIn .5s ease-in-out;
+}
