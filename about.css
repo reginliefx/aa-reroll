@@ -1,19 +1,25 @@
     body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #e8e8e8;
+        margin: 0;
+        font-family: 'Kanit', sans-serif;
+        background-color: #111827;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow-y: auto; /* อนุญาตการเลื่อนหน้าเว็บ */
     }
     .container {
       display: flex;
       align-items: center;
       background: #ffffff;
+      background-color: rgba(255, 255, 255, 0.5); /* โปร่งแสงเล็กน้อย */
       border-radius: 10px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(15px); /* เพิ่มเอฟเฟกต์เบลอพื้นหลัง */
       padding-left: 105px;
+      z-index: 1; /* ทำให้อยู่เหนือ background */
     }
     .image {
       flex: 1;
@@ -39,7 +45,7 @@
     .text p {
       margin: 0 0 5px; /* เพิ่มระยะห่างด้านล่าง 20px */
       font-size: 18px;
-      color: #666;
+      color: #333;
     }
     
     /* โปรไฟล์เด้ง */
@@ -88,7 +94,7 @@
   .instagram-button {
     text-decoration: none;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: normal;
     padding: 10px 20px;
     border-radius: 5px;
     display: flex;
@@ -152,7 +158,7 @@
       text-decoration: none;
       color: white;
       font-size: 1.2rem;
-      font-weight: bold;
+      font-weight: normal;
       padding: 0.5rem 1rem;
       border-radius: 8px;
       background-color: transparent; /* ไม่มีพื้นหลัง */
@@ -163,7 +169,7 @@
       text-decoration: none;
       color: white;
       font-size: 1.2rem;
-      font-weight: bold;
+      font-weight: normal;
       padding: 0.5rem 1rem;
       border-radius: 8px;
       background-color: #d63384; /* ไม่มีพื้นหลัง */
@@ -174,7 +180,7 @@
       text-decoration: none;
       color: white;
       font-size: 1.2rem;
-      font-weight: bold;
+      font-weight: normal;
       padding: 0.5rem 1rem;
       border-radius: 8px;
       background-color: transparent; /* ไม่มีพื้นหลัง */
@@ -191,6 +197,50 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
     }
   
+/* Background Animation */
+.blob-outer-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    inset: 0;
+    margin: auto;
+    filter: blur(100px);
+  }
+  
+  .blob-inner-container {
+    border-radius: 99999px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1000px;
+    overflow: hidden;
+    background-color: #fff;
+    transform: scale(0.8);
+  }
+  
+  .blob {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    margin: auto;
+    background: conic-gradient(from 0deg, #08f, #f60, #bbffa1, #4c00ff, #ab2666, #09f);
+    animation: spinBlob 8s linear infinite;
+  }
+  
+  @keyframes spinBlob {
+    0% {
+      transform: rotate(0deg) scale(2);
+    }
+  
+    100% {
+      transform: rotate(1turn) scale(2);
+    }
+  }
+
 
     /* Animation for fade-in effect on page load */
 @keyframes fadeIn {
@@ -198,7 +248,7 @@
       opacity: 0;
       background-color: rgb(255, 255, 255);
     }
-    100% {
+    50% {
       opacity: 1;
       background-color: rgb(255, 255, 255);
     }
